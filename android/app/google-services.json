@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "717365573323",
+    "project_id": "soulspring-32d30",
+    "storage_bucket": "soulspring-32d30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717365573323:android:7426c36a0215ad983acd4e",
+        "android_client_info": {
+          "package_name": "com.example.soulspring"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717365573323-ah7uksnbbios3u65u0epjovb1thn4g1b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoxkUWAzMK6lzZc8NSFS65uFPrQbiltmg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717365573323-ah7uksnbbios3u65u0epjovb1thn4g1b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
