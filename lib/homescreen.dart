@@ -11,7 +11,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        padding: EdgeInsets.only(top: 20),
+        padding: EdgeInsets.only(top: 25),
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/img4.jpg'),
@@ -25,8 +25,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
             child: Text(
               'Hi $username',
               style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
+                fontSize: 25,
                 color: Colors.black,
               ),
             ),
@@ -54,53 +53,82 @@ class Homescreen extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(100),
           ),
-         
-
-          
-
-                child: Column( // Combine the children into a single Column
-                crossAxisAlignment: CrossAxisAlignment.start, // Align children to the start (left)
+          child: Column(
+            // Combine the children into a single Column
+            crossAxisAlignment:
+                CrossAxisAlignment.start, // Align children to the start (left)
             children: [
-
               SizedBox(
                 height: 7,
               ),
-
-              Text("Mood", style:TextStyle(fontWeight: FontWeight.bold, fontSize: 24,color: Colors.brown)),
+              Padding(
+                padding: EdgeInsets.only(
+                    left: 20), // Add padding to the left of "Mood" text
+                child: Text(
+                  "Mood",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                      color: Colors.brown),
+                ),
+              ),
               SizedBox(
                 height: 7,
               ),
-              
               Row(
                 children: [
-                  mood(AssetImage("assets/img1.jpg"), "Calm", () {}),
-                  SizedBox( width: 10,),
-                  mood(AssetImage("assets/img2.jpg"), "Stress", () {}),
-                  SizedBox( width: 10,),
-                  mood(AssetImage("assets/img3.jpg"), "Anxious", () {}),
+                  mood(Icons.sentiment_very_satisfied, "Calm", () {}),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  mood(Icons.sentiment_dissatisfied, "Stress", () {}),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  mood(Icons.sentiment_very_dissatisfied, "Anxiety", () {}),
                 ],
               ),
-
-               Text("Activities", style:TextStyle(fontWeight: FontWeight.bold, fontSize: 24,color: Colors.brown)),
+              Padding(
+                padding: EdgeInsets.only(
+                    left: 20), // Add padding to the left of "Mood" text
+                child: Text(
+                  "Activities",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                      color: Colors.brown),
+                ),
+              ),
               SizedBox(
                 height: 7,
               ),
               section(
-                AssetImage("assets/pen1.jpg"),
+                LinearGradient(
+                    colors: [Colors.lightBlue.withOpacity(0.4), Colors.blue.withOpacity(0.7)],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight),
                 "JOURNALLING",
                 "Personal voyage of self-expression and introspection",
                 () {},
                 Icons.create,
               ),
               section(
-                AssetImage("assets/pen2.jpg"),
+                LinearGradient(
+                  colors: [Colors.orange.withOpacity(0.4), Colors.deepOrange.withOpacity(0.7)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
                 "MEDITATION",
                 "Mindful meditation for inner peace and clarity.",
                 () {},
                 Icons.spa,
               ),
               section(
-                AssetImage("assets/pen2.jpg"),
+                LinearGradient(
+                  colors: [Colors.purple.withOpacity(0.4), Colors.deepPurple.withOpacity(0.7)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
                 "THERAPY",
                 "Professional support for emotional growth and healing",
                 () {},
